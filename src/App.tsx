@@ -102,7 +102,12 @@ export default function App() {
         {/* Profile Info */}
         <motion.div variants={itemVariants} className="relative pt-12 pb-8 flex flex-col items-center text-center px-6">
           <div className="relative mb-6">
-            <motion.div animate={{ rotate: 360 }} transition={{ duration: 15, repeat: Infinity, ease: "linear" }} className="absolute -inset-2 rounded-full border-2 border-dashed border-neon-cyan/30" />
+            {/* Rotate logic slow kora holo lag komanor jonno */}
+            <motion.div 
+              animate={{ rotate: 360 }} 
+              transition={{ duration: 25, repeat: Infinity, ease: "linear" }} 
+              className="absolute -inset-2 rounded-full border-2 border-dashed border-neon-cyan/20" 
+            />
             <img src={profileData.profilePic} alt={profileData.name} className="w-32 h-32 rounded-full border-2 border-white/10 relative z-10 object-cover" />
           </div>
           <motion.h1 variants={itemVariants} className="text-3xl font-display font-bold text-white mb-1 tracking-tight">
@@ -113,7 +118,7 @@ export default function App() {
           </motion.p>
         </motion.div>
 
-        {/* Buttons */}
+        {/* Action Buttons */}
         <motion.div variants={itemVariants} className="px-6 mb-8">
           <motion.button 
             whileTap={{ scale: 0.98 }}
@@ -141,7 +146,27 @@ export default function App() {
           </div>
         </motion.div>
 
-        {/* Links & Information */}
+        {/* Social Media Links (Re-added) */}
+        <motion.div variants={itemVariants} className="px-6 mb-8">
+          <h3 className="text-gray-500 text-[10px] uppercase font-bold tracking-widest mb-4 ml-1">Connect with me</h3>
+          <div className="flex flex-wrap gap-3">
+            {profileData.socials.map((social, idx) => (
+              <motion.a
+                key={idx}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="w-12 h-12 glass rounded-xl flex items-center justify-center text-gray-300 hover:text-neon-cyan transition-all"
+              >
+                {social.icon}
+              </motion.a>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Contact Info List */}
         <motion.div variants={itemVariants} className="px-6 mb-8 space-y-3">
           {[
             { icon: <Phone className="w-4 h-4" />, value: profileData.phone, label: 'Mobile', href: `tel:${profileData.phone}` },
@@ -152,14 +177,14 @@ export default function App() {
               <div className="w-10 h-10 rounded-xl bg-neon-cyan/10 flex items-center justify-center text-neon-cyan">
                 {info.icon}
               </div>
-              <div>
+              <div className="flex-1">
                 <p className="text-[10px] text-gray-500 uppercase font-bold tracking-widest">{info.label}</p>
                 <p className="text-sm text-gray-200 font-medium">{info.value}</p>
               </div>
             </motion.a>
           ))}
 
-          {/* Optimized Location Card (Text Only) */}
+          {/* Location Card */}
           <motion.a 
             href={profileData.mapLink}
             target="_blank"
@@ -192,7 +217,7 @@ export default function App() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/90 backdrop-blur-sm">
             <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="glass p-8 rounded-[2rem] max-w-xs w-full flex flex-col items-center relative">
               <button onClick={() => setShowQR(false)} className="absolute top-4 right-4 text-gray-500"><X /></button>
-              <div className="bg-white p-4 rounded-2xl mb-6">
+              <div className="bg-white p-4 rounded-2xl mb-6 shadow-2xl">
                 <QRCodeCanvas id="qr-code-canvas" value={window.location.href} size={180} />
               </div>
               <button onClick={downloadQRCode} className="w-full py-3 rounded-xl bg-neon-cyan text-black font-bold flex items-center justify-center gap-2">

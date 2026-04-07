@@ -34,10 +34,10 @@ const profileData = {
   location: "Ulipur, Kurigram, Rangpur Division, Bangladesh",
   mapLink: "https://maps.google.com/?q=Ulipur,Kurigram,Bangladesh",
   socials: [
-    { name: 'Facebook', icon: <Facebook className="w-5 h-5" />, url: 'https://www.facebook.com/dmsujonnbd' },
-    { name: 'Instagram', icon: <Instagram className="w-5 h-5" />, url: 'https://www.instagram.com/sujonfreelancerdm/' },
-    { name: 'LinkedIn', icon: <Linkedin className="w-5 h-5" />, url: 'https://www.linkedin.com/in/prosujonbd' },
-    { name: 'Twitter', icon: <Twitter className="w-5 h-5" />, url: 'https://x.com/dmsujonnbd' },
+    { name: 'Facebook', icon: <Facebook className="w-5 h-5" />, url: 'https://www.facebook.com/bdsujondm1' },
+    { name: 'Instagram', icon: <Instagram className="w-5 h-5" />, url: 'https://www.instagram.com/bdsujondm/' },
+    { name: 'LinkedIn', icon: <Linkedin className="w-5 h-5" />, url: 'https://www.linkedin.com/in/bdsujondm1' },
+    { name: 'Twitter', icon: <Twitter className="w-5 h-5" />, url: 'https://x.com/bdsujondm' },
     { name: 'Website', icon: <Globe className="w-5 h-5" />, url: 'https://dmsujonbd.vercel.app/' },
   ]
 };

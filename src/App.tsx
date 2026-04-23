@@ -30,15 +30,15 @@ const profileData = {
   phone: "+8801740027957",
   whatsapp: "+8801995620916",
   email: "bdsujonndm@gmail.com",
-  website: "dmsujonbd.vercel.app",
+  website: "bdsujondm.pro.bd",
   location: "Ulipur, Kurigram, Rangpur Division, Bangladesh",
   mapLink: "https://maps.google.com/?q=Ulipur,Kurigram,Bangladesh",
   socials: [
     { name: 'Facebook', icon: <Facebook className="w-5 h-5" />, url: 'https://www.facebook.com/bdsujondm1' },
-    { name: 'Instagram', icon: <Instagram className="w-5 h-5" />, url: 'https://www.instagram.com/bdsujondm/' },
+    { name: 'Instagram', icon: <Instagram className="w-5 h-5" />, url: 'https://www.instagram.com/bdsujondm_/' },
     { name: 'LinkedIn', icon: <Linkedin className="w-5 h-5" />, url: 'https://www.linkedin.com/in/bdsujondm1' },
     { name: 'Twitter', icon: <Twitter className="w-5 h-5" />, url: 'https://x.com/bdsujondm' },
-    { name: 'Website', icon: <Globe className="w-5 h-5" />, url: 'https://dmsujonbd.vercel.app/' },
+    { name: 'Website', icon: <Globe className="w-5 h-5" />, url: 'https://bdsujondm.pro.bd/' },
   ]
 };
 
